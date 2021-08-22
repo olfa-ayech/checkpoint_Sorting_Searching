@@ -1,0 +1,42 @@
+FUNCTION  sort_Array(arr) : ARRAY_OF INTEGER
+VAR
+   X:INTEGER
+  i:INTEGER:=0
+  j:INTEGER:=0
+BEGIN
+   WHILE (i<arr.length) DO
+     FOR J FROM 0 TO arr.length -1 STEP 1  DO
+        IF(arr[i]<arr[j]) THEN
+             x=arr[i] 
+             arr[i]=arr[j]
+             arr[j]=x
+         END_IF
+      END_FOR
+      i++
+    END_WHILE
+   
+RETURN arr;
+END
+/////////////////////////////////Programme pricipal/////////////////////////////////////////////////////////////
+ALGORITHM add_Card
+VAR
+   arr: ARRAY_OF INTEGER[] ;
+   arr2: ARRAY_OF INTEGER[] ;
+   arr3: ARRAY_OF INTEGER[] ;
+   i,elt: INTEGER
+   
+BEGIN
+arr1=sort_Array(arr)
+Write("donner l'element à inserer")
+Read(elt)
+ FOR i FROM 0 TO arr2.length -1 STEP 1  DO
+   IF(arr2[j]<elt) THEN
+      arr3.push(arr2[j])
+   ELSE
+      arr3.push(elt)
+      arr3.push(arr2[j])
+      continue
+   END_IF
+ END_FOR
+         
+END
